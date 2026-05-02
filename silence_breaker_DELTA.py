@@ -152,7 +152,7 @@ def tick_timers():
                   " seconds.")
         #Tick the value, and play sound if needed.
         if(not sound_checkboxes[i].get()):
-            break #disarmed, so don't tick this sound.
+            continue #disarmed, so don't tick this sound.
         seconds_left_values[i] = (seconds_left_values[i] - 1)
         if (seconds_left_values[i] < 1):
             sounds[i].play()
